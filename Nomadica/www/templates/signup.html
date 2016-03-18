@@ -6,25 +6,25 @@
     <div class="list">
       <label class="item item-input item-stacked-label">
         <span class="input-label">Username</span>
-        <input type="text">
+        <input type="text" ng-model="MC.user_name">
       </label>
       <label class="item item-input item-stacked-label">
         <span class="input-label">Email</span>
-        <input type="text">
+        <input type="email" ng-model="MC.email">
       </label>
       <label class="item item-input item-stacked-label">
         <span class="input-label">Password</span>
-        <input type="text">
+        <input type="password" ng-model="MC.password">
       </label>
       <label class="item item-input item-stacked-label">
         <span class="input-label">Confirm Password</span>
-        <input type="text">
+        <input type="password">
       </label>
     </div>
     <div class="row">
       <div class="col text-center">
         <a href='#/signin'>
-          <button class="button button-balanced">
+          <button ng-click='MC.signUp(MC.user_name, MC.email, MC.password)' class="button button-balanced">
             Sign Up
           </button>
         </a>
