@@ -7,18 +7,17 @@ angular.module('Nomadica.controllers', ['ionic'])
   var vm = this;
 
   vm.signUp = function(user_name, email, password) {
+    console.log("hello");
     $http({
       url: 'http://localhost:3000/users',
       method: 'POST',
       data: {
-        user_name: user_name,
-        email: email,
-        password: password
+        "user_name": user_name,
+        "email": email,
+        "password": password
       }
     }).then(function() {
       console.log("success");
     });
-
   };
-
 });
