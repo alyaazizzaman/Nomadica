@@ -10,17 +10,6 @@ var bodyParser = require('body-parser');
 
 var cors = require('cors');
 
-var users = require('./routes/users');
-
-//knex
-var knex = require('knex')({
-  client: 'pg',
-  connection: process.env.DATABASE_URL,
-  migrations: {
-    tableName: 'nomadica_knex_migrations'
-    }
-});
-
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
